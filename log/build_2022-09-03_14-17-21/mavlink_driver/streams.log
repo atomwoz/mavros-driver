@@ -1,0 +1,26 @@
+[0.494s] Invoking command in '/root/mavlink_driver': PYTHONPATH=/root/mavlink_driver/install/mavlink_driver/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base build/mavlink_driver build --build-base /root/mavlink_driver/build/mavlink_driver/build install --prefix /root/mavlink_driver/install/mavlink_driver --record /root/mavlink_driver/build/mavlink_driver/install.log --single-version-externally-managed
+[0.698s] running egg_info
+[0.699s] writing build/mavlink_driver/mavlink_driver.egg-info/PKG-INFO
+[0.699s] writing dependency_links to build/mavlink_driver/mavlink_driver.egg-info/dependency_links.txt
+[0.699s] writing entry points to build/mavlink_driver/mavlink_driver.egg-info/entry_points.txt
+[0.699s] writing requirements to build/mavlink_driver/mavlink_driver.egg-info/requires.txt
+[0.699s] writing top-level names to build/mavlink_driver/mavlink_driver.egg-info/top_level.txt
+[0.701s] reading manifest file 'build/mavlink_driver/mavlink_driver.egg-info/SOURCES.txt'
+[0.702s] writing manifest file 'build/mavlink_driver/mavlink_driver.egg-info/SOURCES.txt'
+[0.702s] running build
+[0.702s] running build_py
+[0.702s] copying mavlink_driver/all_vehicle_types.py -> /root/mavlink_driver/build/mavlink_driver/build/lib/mavlink_driver
+[0.702s] running install
+[0.703s] running install_lib
+[0.703s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[0.703s]   warnings.warn(
+[0.703s] copying /root/mavlink_driver/build/mavlink_driver/build/lib/mavlink_driver/all_vehicle_types.py -> /root/mavlink_driver/install/mavlink_driver/lib/python3.10/site-packages/mavlink_driver
+[0.704s] byte-compiling /root/mavlink_driver/install/mavlink_driver/lib/python3.10/site-packages/mavlink_driver/all_vehicle_types.py to all_vehicle_types.cpython-310.pyc
+[0.705s] running install_data
+[0.705s] running install_egg_info
+[0.706s] removing '/root/mavlink_driver/install/mavlink_driver/lib/python3.10/site-packages/mavlink_driver-0.0.0-py3.10.egg-info' (and everything under it)
+[0.706s] Copying build/mavlink_driver/mavlink_driver.egg-info to /root/mavlink_driver/install/mavlink_driver/lib/python3.10/site-packages/mavlink_driver-0.0.0-py3.10.egg-info
+[0.707s] running install_scripts
+[0.724s] Installing all_vehicle_types script to /root/mavlink_driver/install/mavlink_driver/lib/mavlink_driver
+[0.724s] writing list of installed files to '/root/mavlink_driver/build/mavlink_driver/install.log'
+[0.743s] Invoked command in '/root/mavlink_driver' returned '0': PYTHONPATH=/root/mavlink_driver/install/mavlink_driver/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base build/mavlink_driver build --build-base /root/mavlink_driver/build/mavlink_driver/build install --prefix /root/mavlink_driver/install/mavlink_driver --record /root/mavlink_driver/build/mavlink_driver/install.log --single-version-externally-managed

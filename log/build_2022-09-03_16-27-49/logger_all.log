@@ -1,0 +1,88 @@
+[0.274s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.275s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7f56edb4ff70>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f56ee49d510>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f56ee49d510>>, mixin_verb=('build',))
+[0.293s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.294s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/Gazebo.meta'
+[0.294s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/fastrtps.meta'
+[0.294s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.294s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.294s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.294s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.295s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.295s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/root/mavlink_driver'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.313s] DEBUG:colcon.colcon_core.package_identification:Package '.' with type 'ros.ament_python' and name 'mavlink_driver'
+[0.314s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.314s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.314s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.314s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.314s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.334s] Level 5:colcon.colcon_core.verb:set package 'mavlink_driver' build argument 'cmake_args' from command line to 'None'
+[0.334s] Level 5:colcon.colcon_core.verb:set package 'mavlink_driver' build argument 'cmake_target' from command line to 'None'
+[0.334s] Level 5:colcon.colcon_core.verb:set package 'mavlink_driver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.334s] Level 5:colcon.colcon_core.verb:set package 'mavlink_driver' build argument 'cmake_clean_cache' from command line to 'False'
+[0.334s] Level 5:colcon.colcon_core.verb:set package 'mavlink_driver' build argument 'cmake_clean_first' from command line to 'False'
+[0.334s] Level 5:colcon.colcon_core.verb:set package 'mavlink_driver' build argument 'cmake_force_configure' from command line to 'False'
+[0.334s] Level 5:colcon.colcon_core.verb:set package 'mavlink_driver' build argument 'ament_cmake_args' from command line to 'None'
+[0.334s] Level 5:colcon.colcon_core.verb:set package 'mavlink_driver' build argument 'catkin_cmake_args' from command line to 'None'
+[0.334s] Level 5:colcon.colcon_core.verb:set package 'mavlink_driver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.334s] DEBUG:colcon.colcon_core.verb:Building package 'mavlink_driver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/root/mavlink_driver/build/mavlink_driver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/root/mavlink_driver/install/mavlink_driver', 'merge_install': False, 'path': '/root/mavlink_driver', 'symlink_install': False, 'test_result_base': None}
+[0.335s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.338s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.339s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/root/mavlink_driver' with build type 'ament_python'
+[0.339s] Level 1:colcon.colcon_core.shell:create_environment_hook('mavlink_driver', 'ament_prefix_path')
+[0.343s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.343s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/mavlink_driver/install/mavlink_driver/share/mavlink_driver/hook/ament_prefix_path.ps1'
+[0.344s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/mavlink_driver/install/mavlink_driver/share/mavlink_driver/hook/ament_prefix_path.dsv'
+[0.344s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/mavlink_driver/install/mavlink_driver/share/mavlink_driver/hook/ament_prefix_path.sh'
+[0.345s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.345s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.562s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/root/mavlink_driver'
+[0.563s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.563s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.853s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/mavlink_driver': PYTHONPATH=/root/mavlink_driver/install/mavlink_driver/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base build/mavlink_driver build --build-base /root/mavlink_driver/build/mavlink_driver/build install --prefix /root/mavlink_driver/install/mavlink_driver --record /root/mavlink_driver/build/mavlink_driver/install.log --single-version-externally-managed
+[1.111s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/mavlink_driver' returned '0': PYTHONPATH=/root/mavlink_driver/install/mavlink_driver/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base build/mavlink_driver build --build-base /root/mavlink_driver/build/mavlink_driver/build install --prefix /root/mavlink_driver/install/mavlink_driver --record /root/mavlink_driver/build/mavlink_driver/install.log --single-version-externally-managed
+[1.115s] Level 1:colcon.colcon_core.environment:checking '/root/mavlink_driver/install/mavlink_driver' for CMake module files
+[1.115s] Level 1:colcon.colcon_core.environment:checking '/root/mavlink_driver/install/mavlink_driver' for CMake config files
+[1.116s] Level 1:colcon.colcon_core.environment:checking '/root/mavlink_driver/install/mavlink_driver/lib'
+[1.117s] Level 1:colcon.colcon_core.environment:checking '/root/mavlink_driver/install/mavlink_driver/bin'
+[1.117s] Level 1:colcon.colcon_core.environment:checking '/root/mavlink_driver/install/mavlink_driver/lib/pkgconfig/mavlink_driver.pc'
+[1.117s] Level 1:colcon.colcon_core.environment:checking '/root/mavlink_driver/install/mavlink_driver/lib/python3.10/site-packages'
+[1.117s] Level 1:colcon.colcon_core.shell:create_environment_hook('mavlink_driver', 'pythonpath')
+[1.119s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/mavlink_driver/install/mavlink_driver/share/mavlink_driver/hook/pythonpath.ps1'
+[1.120s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/mavlink_driver/install/mavlink_driver/share/mavlink_driver/hook/pythonpath.dsv'
+[1.120s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/mavlink_driver/install/mavlink_driver/share/mavlink_driver/hook/pythonpath.sh'
+[1.120s] Level 1:colcon.colcon_core.environment:checking '/root/mavlink_driver/install/mavlink_driver/bin'
+[1.120s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mavlink_driver)
+[1.122s] INFO:colcon.colcon_core.shell:Creating package script '/root/mavlink_driver/install/mavlink_driver/share/mavlink_driver/package.ps1'
+[1.122s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/mavlink_driver/install/mavlink_driver/share/mavlink_driver/package.dsv'
+[1.123s] INFO:colcon.colcon_core.shell:Creating package script '/root/mavlink_driver/install/mavlink_driver/share/mavlink_driver/package.sh'
+[1.123s] INFO:colcon.colcon_core.shell:Creating package script '/root/mavlink_driver/install/mavlink_driver/share/mavlink_driver/package.bash'
+[1.124s] INFO:colcon.colcon_core.shell:Creating package script '/root/mavlink_driver/install/mavlink_driver/share/mavlink_driver/package.zsh'
+[1.125s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/mavlink_driver/install/mavlink_driver/share/colcon-core/packages/mavlink_driver)
+[1.126s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.127s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.127s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.127s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.133s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.133s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.133s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.133s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.NotSupported: Unable to autolaunch a dbus-daemon without a $DISPLAY for X11
+[1.133s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.135s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/mavlink_driver/install/local_setup.ps1'
+[1.135s] INFO:colcon.colcon_core.shell:Creating prefix util module '/root/mavlink_driver/install/_local_setup_util_ps1.py'
+[1.137s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/mavlink_driver/install/setup.ps1'
+[1.138s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/mavlink_driver/install/local_setup.sh'
+[1.139s] INFO:colcon.colcon_core.shell:Creating prefix util module '/root/mavlink_driver/install/_local_setup_util_sh.py'
+[1.139s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/mavlink_driver/install/setup.sh'
+[1.141s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/mavlink_driver/install/local_setup.bash'
+[1.141s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/mavlink_driver/install/setup.bash'
+[1.142s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/mavlink_driver/install/local_setup.zsh'
+[1.143s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/mavlink_driver/install/setup.zsh'

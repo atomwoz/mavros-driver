@@ -1,0 +1,35 @@
+running egg_info
+creating build/mavlink_driver/mavlink_driver.egg-info
+writing build/mavlink_driver/mavlink_driver.egg-info/PKG-INFO
+writing dependency_links to build/mavlink_driver/mavlink_driver.egg-info/dependency_links.txt
+writing entry points to build/mavlink_driver/mavlink_driver.egg-info/entry_points.txt
+writing requirements to build/mavlink_driver/mavlink_driver.egg-info/requires.txt
+writing top-level names to build/mavlink_driver/mavlink_driver.egg-info/top_level.txt
+writing manifest file 'build/mavlink_driver/mavlink_driver.egg-info/SOURCES.txt'
+reading manifest file 'build/mavlink_driver/mavlink_driver.egg-info/SOURCES.txt'
+writing manifest file 'build/mavlink_driver/mavlink_driver.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /root/mavlink_driver/build/mavlink_driver/build
+creating /root/mavlink_driver/build/mavlink_driver/build/lib
+creating /root/mavlink_driver/build/mavlink_driver/build/lib/mavlink_driver
+copying mavlink_driver/__init__.py -> /root/mavlink_driver/build/mavlink_driver/build/lib/mavlink_driver
+copying mavlink_driver/all_vehicle_types.py -> /root/mavlink_driver/build/mavlink_driver/build/lib/mavlink_driver
+running install
+running install_lib
+creating /root/mavlink_driver/install/mavlink_driver/lib/python3.10/site-packages/mavlink_driver
+copying /root/mavlink_driver/build/mavlink_driver/build/lib/mavlink_driver/__init__.py -> /root/mavlink_driver/install/mavlink_driver/lib/python3.10/site-packages/mavlink_driver
+copying /root/mavlink_driver/build/mavlink_driver/build/lib/mavlink_driver/all_vehicle_types.py -> /root/mavlink_driver/install/mavlink_driver/lib/python3.10/site-packages/mavlink_driver
+byte-compiling /root/mavlink_driver/install/mavlink_driver/lib/python3.10/site-packages/mavlink_driver/__init__.py to __init__.cpython-310.pyc
+byte-compiling /root/mavlink_driver/install/mavlink_driver/lib/python3.10/site-packages/mavlink_driver/all_vehicle_types.py to all_vehicle_types.cpython-310.pyc
+running install_data
+creating /root/mavlink_driver/install/mavlink_driver/share/ament_index
+creating /root/mavlink_driver/install/mavlink_driver/share/ament_index/resource_index
+creating /root/mavlink_driver/install/mavlink_driver/share/ament_index/resource_index/packages
+copying resource/mavlink_driver -> /root/mavlink_driver/install/mavlink_driver/share/ament_index/resource_index/packages
+copying package.xml -> /root/mavlink_driver/install/mavlink_driver/share/mavlink_driver
+running install_egg_info
+Copying build/mavlink_driver/mavlink_driver.egg-info to /root/mavlink_driver/install/mavlink_driver/lib/python3.10/site-packages/mavlink_driver-0.0.0-py3.10.egg-info
+running install_scripts
+Installing all_vehicle_types script to /root/mavlink_driver/install/mavlink_driver/lib/mavlink_driver
+writing list of installed files to '/root/mavlink_driver/build/mavlink_driver/install.log'

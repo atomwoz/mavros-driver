@@ -1,0 +1,7 @@
+/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+  File "/root/mavlink_driver/install/mavlink_driver/lib/python3.10/site-packages/mavlink_driver/all_vehicle_types.py", line 110
+    while minimal_client.rel_alt <= alt-(0.1*alt) && rclpy.ok():
+                                                   ^
+SyntaxError: invalid syntax
+

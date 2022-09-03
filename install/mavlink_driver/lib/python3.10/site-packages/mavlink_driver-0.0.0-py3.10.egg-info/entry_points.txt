@@ -1,0 +1,3 @@
+[console_scripts]
+all_vehicle_types = mavlink_driver.all_vehicle_types:main
+

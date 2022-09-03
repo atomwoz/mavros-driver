@@ -1,0 +1,24 @@
+running egg_info
+writing build/mavlink_driver/mavlink_driver.egg-info/PKG-INFO
+writing dependency_links to build/mavlink_driver/mavlink_driver.egg-info/dependency_links.txt
+writing entry points to build/mavlink_driver/mavlink_driver.egg-info/entry_points.txt
+writing requirements to build/mavlink_driver/mavlink_driver.egg-info/requires.txt
+writing top-level names to build/mavlink_driver/mavlink_driver.egg-info/top_level.txt
+reading manifest file 'build/mavlink_driver/mavlink_driver.egg-info/SOURCES.txt'
+writing manifest file 'build/mavlink_driver/mavlink_driver.egg-info/SOURCES.txt'
+running build
+running build_py
+copying mavlink_driver/all_vehicle_types.py -> /root/mavlink_driver/build/mavlink_driver/build/lib/mavlink_driver
+running install
+running install_lib
+copying /root/mavlink_driver/build/mavlink_driver/build/lib/mavlink_driver/all_vehicle_types.py -> /root/mavlink_driver/install/mavlink_driver/lib/python3.10/site-packages/mavlink_driver
+byte-compiling /root/mavlink_driver/install/mavlink_driver/lib/python3.10/site-packages/mavlink_driver/all_vehicle_types.py to all_vehicle_types.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/root/mavlink_driver/install/mavlink_driver/lib/python3.10/site-packages/mavlink_driver-0.0.0-py3.10.egg-info' (and everything under it)
+Copying build/mavlink_driver/mavlink_driver.egg-info to /root/mavlink_driver/install/mavlink_driver/lib/python3.10/site-packages/mavlink_driver-0.0.0-py3.10.egg-info
+running install_scripts
+/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+Installing all_vehicle_types script to /root/mavlink_driver/install/mavlink_driver/lib/mavlink_driver
+writing list of installed files to '/root/mavlink_driver/build/mavlink_driver/install.log'
