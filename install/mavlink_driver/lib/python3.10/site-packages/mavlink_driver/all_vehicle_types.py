@@ -6,10 +6,12 @@ from mavros_msgs.srv import CommandBool
 from mavros_msgs.srv import CommandTOL
 from mavros_msgs.srv import CommandLong
 from geometry_msgs.msg import TwistStamped
+from geometry_msgs.msg import PoseStamped
 from geometry_msgs.msg import Vector3
 from mavros_msgs.srv import SetMode
 from std_msgs.msg import Float64
 from rclpy.qos import ReliabilityPolicy, QoSProfile
+from scipy.spatial.transform import Rotation as R
 
 minimal_client = None
 
@@ -24,6 +26,7 @@ class MavrosUniversalVehicleDriver(Node):
         self.req_speed = Vector3()
         self.rel_alt = -1
         self.point_flag = False
+        self.quat_rotation = {"pose":{"position":{},"orientation":{"x":0,"y":0,"z":0,"w":0}}}
 
         self.arm_client = self.create_client(CommandBool,'/mavros/cmd/arming')
         while not self.arm_client.wait_for_service(timeout_sec=3.0):
@@ -42,6 +45,7 @@ class MavrosUniversalVehicleDriver(Node):
             self.get_logger().warn('Other service not available, waiting again...')
         self.velocity_publisher = self.create_publisher(TwistStamped, '/mavros/setpoint_velocity/cmd_vel',16)
         self.alt_subscribtion = self.create_subscription(Float64,'/mavros/global_position/rel_alt',self.alt_callback,QoSProfile(depth=10,reliability=ReliabilityPolicy.BEST_EFFORT))
+        self.local_postion_subscribtion = self.create_subscription(PoseStamped,'/mavros/local_position/pose',self.pos_callback,QoSProfile(depth=10,reliability=ReliabilityPolicy.BEST_EFFORT))
         self.point_subscribtion = self.create_subscription(Vector3,'/mavlink_driver/point',self.point_callback,QoSProfile(depth=10,reliability=ReliabilityPolicy.BEST_EFFORT))
 
         self.arm_message = CommandBool.Request()
@@ -49,6 +53,9 @@ class MavrosUniversalVehicleDriver(Node):
         self.command_message = CommandLong.Request()
         self.geo_message = TwistStamped()
         self.setmode_message = SetMode.Request()
+
+    def pos_callback(self,data):
+        self.quat_rotation = data.pose.orientation
 
     def point_callback(self,data):
         self.point_flag = True
@@ -94,13 +101,20 @@ class MavrosUniversalVehicleDriver(Node):
         self.get_logger().warn(str(msg))
     
     def set_velocity(self,x=0,y=0,z=0,ax=0,ay=0,az=0,speed=1.5):
+        r = R.from_quat([self.quat_rotation.x,self.quat_rotation.y,self.quat_rotation.z,self.quat_rotation.w])
+        applied = r.apply([x,y,z])
+
+        self.info(applied)
+
         self.twist = self.geo_message.twist
-        self.twist.linear.x = float(x) * speed
-        self.twist.linear.y = float(y) * speed
-        self.twist.linear.z = float(z) * speed
+        self.twist.linear.x = float(applied[0]) * speed
+        self.twist.linear.y = float(applied[1]) * speed
+        self.twist.linear.z = float(applied[2]) * speed
+
         self.twist.angular.x = float(ax) * speed
         self.twist.angular.y = float(ay) * speed
         self.twist.angular.z = float(az) * speed
+
         self.velocity_publisher.publish(self.geo_message)
 
 def wait_for_result(eq,msg_ok,msg_error="",error_fun=None):
